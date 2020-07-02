@@ -1,11 +1,12 @@
-/**
- * Quasar App Extension index/runner script
- * (runs on each dev/build)
- *
- * Docs: https://quasar.dev/app-extensions/development-guide/index-api
- * API: https://github.com/quasarframework/quasar/blob/master/app/lib/app-extension/IndexAPI.js
- */
+const sourcePath = '~@bildvitta/quasar-app-extension-responsive/src/'
+const resolve = (...paths) => paths.map(path => sourcePath + path)
+
+const extendQuasar = quasar => {
+  quasar.css.push(...resolve(
+    'css/spaces.scss'
+  ))
+}
 
 module.exports = function (api) {
-  //
+  api.extendQuasarConf(extendQuasar)
 }
