@@ -20,7 +20,7 @@ This project have diferente classes to deal with Margin and Padding on the proje
 You can use classes to edit your component margin and padding in your project according to the breakpoint and size on Quasar variables, to use this classes you can follow the example below.
 
 ```
-  {breakpoint}:q-{margin/padding}-{breakpoint-size}
+  {breakpoint}:q-{margin/padding}{side}-{breakpoint-size}
 ```
 
 |            | xs       | sm         | md          | lg          | xl          |
