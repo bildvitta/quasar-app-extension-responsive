@@ -1,32 +1,60 @@
-Quasar App Extension Title <- change name
+Quasar App Extension Responsive
 ===
 
-_Be sure to change this readme as appropriate for your app extension._
-
-_Think about the organization of this file and how the information will be beneficial to the user._
-
-> Add a short description of your App Extension. What does it do? How is it beneficial? Why would someone want to use it?
+This repository have classes that use the [basic Quasar variables](https://quasar.dev/style/sass-scss-variables#Variables-list) to create a range of different responsive values through or projects that will use those classes.
+Using those, we can change the default margin and padding to another screen size margin and/or padding
 
 # Install
+
+To install Just use the command bellow in a quasar project
 ```bash
-quasar ext add @bildvitta/responsive <- change name
+quasar ext add @bildvitta/responsive
 ```
-Quasar CLI will retrieve it from NPM and install the extension.
 
-## Prompts
+The Quasar CLI will retrieve it automatically from [NPM](https://www.npmjs.com/package/@bildvitta/quasar-app-extension-responsive) and install the extension.
 
-> If your app extension uses prompts, explain them here, otherwise remove this section.
+## Content
+
+This project have diferente classes to deal with Margin and Padding on the project using the Quasar sizes and the Quasar breakpoints.
+
+You can use classes to edit your component margin and padding in your project according to the breakpoint and size on Quasar variables, to use this classes you can follow the example below.
+
+```
+  {breakpoint}:q-{margin/padding}-{breakpoint-size}
+```
+
+|            | xs       | sm         | md          | lg          | xl          |
+|------------|----------|------------|-------------|-------------|-------------|
+| Breakpoint | from 0px | from 600px | from 1024px | from 1440px | from 1920px |
+| Size       | 4px      | 8px        | 16px        | 24px        | 48px        |
+> The spacing is due by a calc done on Quasar documentation, if you want do know more, please, see it [here](https://quasar.dev/style/sass-scss-variables#Variables-list)
+
+This was made to change the default margin and padding from Quasar and change it according the default variables. 
+
+### Examples 
+
+```html
+<!-- on xs breakpoint (from 0px up), margin-top: none | on xl breakpoint (from 1920px), margin-bottom: 4px (xs breakpoint size) -->
+<div class="xs:q-mt-none xl:q-mb-xs">
+  Content
+</div>
+```
+
+```html
+<!-- on xs breakpoint (from 0px up), margin-top and margin-bottom: 16px (md size ) | on xs breakpoint (from 0px up), margin-left and margin-right: 24px (lg size)-->
+<div class="xs:q-mx-md xs:q-my-lg">
+  Content
+</div>
+```
+
+```html
+<!-- on lg breakpoint (from 1440px up), padding: 0px on all sides -->
+<div class="lg:q-pa-none">
+  Content
+</div>
+```
 
 # Uninstall
 ```bash
-quasar ext remove @bildvitta/responsive <- change name
+quasar ext remove @bildvitta/responsive
 ```
-
-# Info
-> Add longer information here that will help the user of your app extension.
-
-# Other Info
-> Add other information that's not as important to know
-
-# Donate
-If you appreciate the work that went into this App Extension, please consider [donating to Quasar](https://donate.quasar.dev).

@@ -50,7 +50,7 @@
         padding-bottom: $y;
       }
 
-      .#{$size}:q-pt-#{$space} {
+      .#{$size}\:q-pt-#{$space} {
         padding-top: $y;
       }
 
@@ -62,7 +62,7 @@
         padding-bottom: $y;
       }
 
-      .#{$size}:q-pl-#{$space} {
+      .#{$size}\:q-pl-#{$space} {
         padding-left: $x;
       }
     }
