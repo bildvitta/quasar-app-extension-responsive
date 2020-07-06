@@ -6,7 +6,7 @@ Using those, we can change the default margin and padding to another screen size
 
 # Install
 
-To install Just use the command bellow in a quasar project
+To install just use the command bellow in a quasar project
 ```bash
 quasar ext add @bildvitta/responsive
 ```
