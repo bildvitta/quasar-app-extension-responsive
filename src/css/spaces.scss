@@ -5,47 +5,47 @@
       $y: map-get($value, 'y');
 
       // Margin
-      .#{$size}:q-ma-#{$space} {
+      .#{$size}\:q-ma-#{$space} {
         margin: $y $x;
       }
 
-      .#{$size}:q-mx-#{$space} {
+      .#{$size}\:q-mx-#{$space} {
         margin-left: $x;
         margin-right: $x;
       }
 
-      .#{$size}:q-my-#{$space} {
+      .#{$size}\:q-my-#{$space} {
         margin-top: $y;
         margin-bottom: $y;
       }
 
-      .#{$size}:q-mt-#{$space} {
+      .#{$size}\:q-mt-#{$space} {
         margin-top: $y;
       }
 
-      .#{$size}:q-mr-#{$space} {
+      .#{$size}\:q-mr-#{$space} {
         margin-right: $x;
       }
 
-      .#{$size}:q-mb-#{$space} {
+      .#{$size}\:q-mb-#{$space} {
         margin-bottom: $y;
       }
 
-      .#{$size}:q-ml-#{$space} {
+      .#{$size}\:q-ml-#{$space} {
         margin-left: $x;
       }
 
       // Padding
-      .#{$size}:q-pa-#{$space} {
+      .#{$size}\:q-pa-#{$space} {
         padding: $y $x;
       }
 
-      .#{$size}:q-px-#{$space} {
+      .#{$size}\:q-px-#{$space} {
         padding-left: $x;
         padding-right: $x;
       }
 
-      .#{$size}:q-py-#{$space} {
+      .#{$size}\:q-py-#{$space} {
         padding-top: $y;
         padding-bottom: $y;
       }
@@ -54,11 +54,11 @@
         padding-top: $y;
       }
 
-      .#{$size}:q-pr-#{$space} {
+      .#{$size}\:q-pr-#{$space} {
         padding-right: $x;
       }
 
-      .#{$size}:q-pb-#{$space} {
+      .#{$size}\:q-pb-#{$space} {
         padding-bottom: $y;
       }
 
@@ -68,23 +68,23 @@
     }
 
     // Auto
-    .#{$size}:q-mt-auto,
-    .#{$size}:q-my-auto {
+    .#{$size}\:q-mt-auto,
+    .#{$size}\:q-my-auto {
       margin-top: auto;
     }
 
-    .#{$size}:q-mr-auto,
-    .#{$size}:q-mx-auto {
+    .#{$size}\:q-mr-auto,
+    .#{$size}\:q-mx-auto {
       margin-right: auto;
     }
 
-    .#{$size}:q-mb-auto,
-    .#{$size}:q-my-auto {
+    .#{$size}\:q-mb-auto,
+    .#{$size}\:q-my-auto {
       margin-bottom: auto;
     }
 
-    .#{$size}:q-ml-auto,
-    .#{$size}:q-mx-auto {
+    .#{$size}\:q-ml-auto,
+    .#{$size}\:q-mx-auto {
       margin-left: auto;
     }
   }

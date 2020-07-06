@@ -1,12 +1,22 @@
 {
-  "name": "quasar-app-extension-responsive",
+  "name": "@bildvitta/quasar-app-extension-responsive",
   "version": "0.0.1",
-  "description": "A Quasar App Extension",
-  "author": "Caio Tarifa <caiotarifa@gmail.com>",
+  "description": "A Quasar App Extension for responsive classes",
+  "author": "Bild & Vitta",
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
+  },
+  "keywords": [
+    "quasar",
+    "app-extension",
+    "responsive",
+    "style"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.com/"
   },
   "repository": {
     "type": "git",
