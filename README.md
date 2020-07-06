@@ -9,7 +9,7 @@ _Think about the organization of this file and how the information will be benef
 
 # Install
 ```bash
-quasar ext add my-ext <- change name
+quasar ext add @bildvitta/responsive <- change name
 ```
 Quasar CLI will retrieve it from NPM and install the extension.
 
@@ -19,7 +19,7 @@ Quasar CLI will retrieve it from NPM and install the extension.
 
 # Uninstall
 ```bash
-quasar ext remove my-ext <- change name
+quasar ext remove @bildvitta/responsive <- change name
 ```
 
 # Info
