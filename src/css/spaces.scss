@@ -1,91 +1,93 @@
 @each $size, $breakpoint in $sizes {
   @media (min-width: $breakpoint) {
-    @each $space, $value in $spaces {
-      $x: map-get($value, 'x');
-      $y: map-get($value, 'y');
+    .#{$size}\:q {
+      @each $space, $value in $spaces {
+        $x: map-get($value, 'x');
+        $y: map-get($value, 'y');
 
-      // Margin
-      .#{$size}\:q-ma-#{$space} {
-        margin: $y $x;
+        // Margin
+        &-ma-#{$space} {
+          margin: $y $x;
+        }
+
+        &-mx-#{$space} {
+          margin-left: $x;
+          margin-right: $x;
+        }
+
+        &-my-#{$space} {
+          margin-top: $y;
+          margin-bottom: $y;
+        }
+
+        &-mt-#{$space} {
+          margin-top: $y;
+        }
+
+        &-mr-#{$space} {
+          margin-right: $x;
+        }
+
+        &-mb-#{$space} {
+          margin-bottom: $y;
+        }
+
+        &-ml-#{$space} {
+          margin-left: $x;
+        }
+
+        // Padding
+        &-pa-#{$space} {
+          padding: $y $x;
+        }
+
+        &-px-#{$space} {
+          padding-left: $x;
+          padding-right: $x;
+        }
+
+        &-py-#{$space} {
+          padding-top: $y;
+          padding-bottom: $y;
+        }
+
+        &-pt-#{$space} {
+          padding-top: $y;
+        }
+
+        &-pr-#{$space} {
+          padding-right: $x;
+        }
+
+        &-pb-#{$space} {
+          padding-bottom: $y;
+        }
+
+        &-pl-#{$space} {
+          padding-left: $x;
+        }
       }
 
-      .#{$size}\:q-mx-#{$space} {
-        margin-left: $x;
-        margin-right: $x;
+      // Auto
+      &-mt-auto,
+      &-my-auto {
+        margin-top: auto;
       }
 
-      .#{$size}\:q-my-#{$space} {
-        margin-top: $y;
-        margin-bottom: $y;
+      &-mr-auto,
+      &-mx-auto {
+        margin-right: auto;
       }
 
-      .#{$size}\:q-mt-#{$space} {
-        margin-top: $y;
+      &-mb-auto,
+      &-my-auto {
+        margin-bottom: auto;
       }
 
-      .#{$size}\:q-mr-#{$space} {
-        margin-right: $x;
+      &-ml-auto,
+      &-mx-auto {
+        margin-left: auto;
       }
-
-      .#{$size}\:q-mb-#{$space} {
-        margin-bottom: $y;
-      }
-
-      .#{$size}\:q-ml-#{$space} {
-        margin-left: $x;
-      }
-
-      // Padding
-      .#{$size}\:q-pa-#{$space} {
-        padding: $y $x;
-      }
-
-      .#{$size}\:q-px-#{$space} {
-        padding-left: $x;
-        padding-right: $x;
-      }
-
-      .#{$size}\:q-py-#{$space} {
-        padding-top: $y;
-        padding-bottom: $y;
-      }
-
-      .#{$size}\:q-pt-#{$space} {
-        padding-top: $y;
-      }
-
-      .#{$size}\:q-pr-#{$space} {
-        padding-right: $x;
-      }
-
-      .#{$size}\:q-pb-#{$space} {
-        padding-bottom: $y;
-      }
-
-      .#{$size}\:q-pl-#{$space} {
-        padding-left: $x;
-      }
-    }
-
-    // Auto
-    .#{$size}\:q-mt-auto,
-    .#{$size}\:q-my-auto {
-      margin-top: auto;
-    }
-
-    .#{$size}\:q-mr-auto,
-    .#{$size}\:q-mx-auto {
-      margin-right: auto;
-    }
-
-    .#{$size}\:q-mb-auto,
-    .#{$size}\:q-my-auto {
-      margin-bottom: auto;
-    }
-
-    .#{$size}\:q-ml-auto,
-    .#{$size}\:q-mx-auto {
-      margin-left: auto;
     }
   }
 }

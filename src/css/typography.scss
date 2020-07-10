@@ -1,0 +1,69 @@
+@each $size, $breakpoint in $sizes {
+  @media (min-width: $breakpoint) {
+    .#{$size}\:text {
+      @each $heading, $value in $headings {
+        &-#{$heading} {
+          font-size: map-get($value, 'size');
+          font-weight: map-get($value, 'weight');
+          letter-spacing: map-get($value, 'letter-spacing');
+          line-height: map-get($value, 'line-height');
+        }
+      }
+
+      // Align
+      &-center {
+        text-align: center;
+      }
+
+      &-left {
+        text-align: left;
+      }
+
+      &-right {
+        text-align: right;
+      }
+
+      &-justify {
+        hyphens: auto;
+        text-align: justify;
+      }
+
+      // Transforms
+      &-capitalize {
+        text-transform: capitalize;
+      }
+
+      &-lowercase {
+        text-transform: lowercase;
+      }
+
+      &-uppercase {
+        text-transform: uppercase;
+      }
+
+      // Others
+      &-italic {
+        font-style: italic;
+      }
+  
+      &-bold {
+        font-weight: bold;
+      }
+  
+      &-no-wrap {
+        white-space: nowrap;
+      }
+  
+      &-strike {
+        text-decoration: line-through;
+      }
+
+      // Weight
+      @each $weight, $value in $text-weights {
+        &-weight-#{$weight} {
+          font-weight: $value;
+        }
+      }
+    }
+  }
+}
