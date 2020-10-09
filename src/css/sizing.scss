@@ -1,0 +1,58 @@
+$size-map: (
+  "100": "100px",
+  "200": "200px",
+  "300": "300px",
+  "400": "400px",
+  "500": "500px",
+  "600": "600px",
+  "700": "700px",
+  "800": "800px",
+  "900": "900px",
+  "1000": "1000px",
+  "1-of-10": "10%",
+  "2-of-10": "20%",
+  "3-of-10": "30%",
+  "4-of-10": "40%",
+  "5-of-10": "50%",
+  "6-of-10": "60%",
+  "7-of-10": "70%",
+  "8-of-10": "80%",
+  "9-of-10": "90%",
+  "full": "100%",
+  "1-of-4": "25%",
+  "3-of-4": "75%",
+);
+
+@each $size-key, $value in $size-map {
+  .max-w-#{$size-key} {
+    max-width: $value;
+  }
+
+  .min-w-#{$size-key} {
+    min-width: $value;
+  }
+
+  .w-#{$size-key} {
+    width: $value;
+  }
+}
+
+@each $size, $breakpoint in $sizes {
+  @media (min-width: $breakpoint) {
+    .#{$size}\: {
+      @each $size-key, $value in $size-map {
+        &max-w-#{$size-key} {
+          max-width: $value;
+        }
+
+        &min-w-#{$size-key} {
+          min-width: $value;
+        }
+
+        &w-#{$size-key} {
+          width: $value;
+        }
+      }
+    }
+  }
+}
