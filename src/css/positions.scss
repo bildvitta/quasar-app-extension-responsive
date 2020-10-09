@@ -1,0 +1,15 @@
+$positions-responsive: (
+  "relative-position": relative,
+  "absolute": absolute,
+  "fixed": fixed
+);
+
+@each $size, $breakpoint in $sizes {
+  @media (min-width: $breakpoint) {
+    @each $key, $value in $positions-responsive {
+      .#{$size}\:#{$key} {
+        position: $value;
+      }
+    }
+  }
+}
