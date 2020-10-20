@@ -82,6 +82,69 @@ On Typography, you can use the classes that we have here to deal with a few prop
 </div>
 ```
 
+### Positions
+
+In Positions, you can use the Absolute, Fixed and relative-position classes to assign a position to the content:
+
+- relative-position
+- absolute
+- fixed
+
+#### Examples
+
+```html
+<!-- class with position relative -->
+<div class="relative-position">
+  Content
+</div>
+```
+
+```html
+<!-- class with position absolute -->
+<div class="absolute">
+  Content
+</div>
+```
+
+```html
+<!-- class with position fixed -->
+<div class="fixed">
+  Content
+</div>
+```
+
+### Sizing
+
+In Sizes you can use the classes we have here to assign a width (minimum / maximum) for your element, like:
+
+- min-w- (100, 200, ..., 1000, 1-of-10, 2-of-10, ..., full, 1-of-4, 3-of-4)
+- max-w- (100, 200, ..., 1000, 1-of-10, 2-of-10, ..., full, 1-of-4, 3-of-4)
+- w- (100, 200, ..., 1000, 1-of-10, 2-of-10, ..., full, 1-of-4, 3-of-4)
+
+
+#### Examples
+
+```html
+<!-- this class will occupy at least 300 px -->
+<div class="min-w-300">
+  Content
+</div>
+```
+
+```html
+<!-- this class will occupied 100% width parent div -->
+<div class="w-full">
+  Content
+</div>
+```
+
+```html
+<!-- this class will occupy a maximum of 1/4  parent div width -->
+<div class="max-w-1-of-4">
+  Content
+</div>
+```
+
 # Uninstall
 
 ```bash
